@@ -1,0 +1,86 @@
+/*
+ * Theme Name: Infrax
+ * Description: Custom theme approximating infrax.eadsc.ru style.
+ */
+
+/* Basic resets */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f7fa; /* approximate background */
+    color: #333;
+}
+
+header, nav, footer {
+    display: block;
+}
+
+/* Header with logo and navigation */
+.qa-header {
+    background-color: #003366; /* approximate main color */
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.qa-header .infrax-logo {
+    float: left;
+}
+
+.qa-header .infrax-nav {
+    float: right;
+}
+
+.qa-header .infrax-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.qa-header .infrax-nav li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.qa-header .infrax-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Clear floats */
+.qa-header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Question list */
+.qa-q-list-item {
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.qa-footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.qa-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .qa-header .infrax-nav li {
+        display: block;
+        margin: 5px 0;
+    }
+}
