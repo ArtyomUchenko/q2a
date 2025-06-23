@@ -1,0 +1,27 @@
+services:
+  db:
+    image: mysql:5.7
+    container_name: q2a-db
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: Ferjl34@adf123
+        MYSQL_DATABASE: q2adb
+        MYSQL_USER: q2auser
+        MYSQL_PASSWORD: Fshl34!adf1
+    volumes:
+        - q2a-db-data:/var/lib/mysql
+
+  web:
+    build: ./q2a
+    image: q2a:10.0.0
+    container_name: q2a-web
+    depends_on:
+      - db
+    ports:
+      - "80:80"
+    restart: always
+    dns:
+      - 8.8.8.8
+
+volumes:
+  q2a-db-data:
